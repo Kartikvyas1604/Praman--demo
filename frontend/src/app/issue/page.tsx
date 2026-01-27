@@ -8,19 +8,19 @@ import { IssueCertificateForm } from '@/components/IssueCertificateForm';
 
 export default function IssuePage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 pb-20">
       {/* Navigation */}
-      <nav className="bg-white dark:bg-gray-800 shadow-sm">
+      <nav className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold text-primary-600">
-              Praman
+          <div className="flex justify-between items-center h-20">
+            <Link href="/" className="flex items-center gap-2">
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Praman</span>
             </Link>
-            <div className="flex gap-6 items-center">
-              <Link href="/verify" className="text-gray-700 dark:text-gray-300 hover:text-primary-600">
+            <div className="flex gap-8 items-center">
+              <Link href="/verify" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                 Verify
               </Link>
-              <Link href="/dashboard" className="text-gray-700 dark:text-gray-300 hover:text-primary-600">
+              <Link href="/dashboard" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                 Dashboard
               </Link>
               <ConnectButton />
@@ -31,10 +31,10 @@ export default function IssuePage() {
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-4">Issue Certificate</h1>
-          <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Issue tamper-proof certificates on the blockchain
+        <div className="text-center mb-12 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-slate-900 dark:text-white">Issue Certificate</h1>
+          <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+            Create and issue tamper-proof certificates on the blockchain. These credentials will be permanently verifiable by anyone.
           </p>
         </div>
 

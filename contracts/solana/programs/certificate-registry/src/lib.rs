@@ -283,7 +283,7 @@ pub struct IssueCertificate<'info> {
     
     #[account(
         mut,
-        seeds = [b"issuer", issuer_authority.key().as_ref()],
+        seeds = [b"issuer", authority.key().as_ref()],
         bump = issuer.bump,
         has_one = authority @ ErrorCode::UnauthorizedIssuer
     )]
@@ -291,7 +291,7 @@ pub struct IssueCertificate<'info> {
     
     #[account(
         init,
-        payer = issuer_authority,
+        payer = authority,
         space = Certificate::LEN,
         seeds = [b"certificate", certificate_id.as_bytes()],
         bump
@@ -302,7 +302,7 @@ pub struct IssueCertificate<'info> {
     pub recipient: AccountInfo<'info>,
     
     #[account(mut)]
-    pub issuer_authority: Signer<'info>,
+    pub authority: Signer<'info>,
     
     pub system_program: Program<'info, System>,
 }
