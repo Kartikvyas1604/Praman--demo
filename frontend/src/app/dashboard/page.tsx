@@ -56,14 +56,6 @@ export default function DashboardPage() {
           </div>
         </div>
       </nav>
-              <Link href="/issue" className="text-gray-700 dark:text-gray-300 hover:text-primary-600">
-                Issue
-              </Link>
-              <ConnectButton />
-            </div>
-          </div>
-        </div>
-      </nav>
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-12">
